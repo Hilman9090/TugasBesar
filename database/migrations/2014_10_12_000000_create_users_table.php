@@ -15,12 +15,13 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->varchar('name', 255);
-            $table->varchar('username', 255)->unique();
-            $table->varchar('email', 255);
+            $table->string('name');
+            $table->string('username');
+            $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
-            $table->varchar('password', 255);
-            $table->varchar('photo', 255);
+            $table->string('password');
+            $table->string('photo');
+            $table->foreignId('roles_id')->constrained();
             $table->rememberToken();
             $table->timestamps();
         });
@@ -34,5 +35,6 @@ class CreateUsersTable extends Migration
     public function down()
     {
         Schema::dropIfExists('users');
+        Schema::dropIfExists('roles');
     }
 }
