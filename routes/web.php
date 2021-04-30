@@ -23,3 +23,4 @@ Route::resource('profil', ProfileController::class);
  /** Route Barang **/
 Route::resource('barang', ItemController::class);
 Route::resource('kategori', CategoriesController::class);
+Route::resource('merek', MerkController::class);
