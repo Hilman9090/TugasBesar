@@ -17,3 +17,6 @@ Route::group(['middleware' => ['auth']], function () {
         [DashboardController::class, 'index']
     )
         ->name('dashboard');
+/** Route Profile **/
+Route::resource('profil', ProfileController::class);
+});
