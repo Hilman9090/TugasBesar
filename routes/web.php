@@ -28,3 +28,7 @@ Route::get(
     'laporan/barang',
     [ItemController::class, 'report']
 )->name('laporan.barang');
+Route::get(
+    'laporan/keuangan',
+    [FinanceController::class, 'report']
+)->name('laporan.keuangan');
