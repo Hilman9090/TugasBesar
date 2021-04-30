@@ -31,7 +31,12 @@ php artisan storage:link
 ```sh
 php artisan serve
 ```
+## Use
+```
+admin : admin@hilman.com
+password : 123456
+user : user@hilman.com
+password : 123456
+pegawai : pegawai@hilman.com
+password : 123456
 
-## Show your support
-
-Give a ⭐️ if this project helped you!
