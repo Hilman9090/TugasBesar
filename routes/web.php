@@ -20,3 +20,5 @@ Route::group(['middleware' => ['auth']], function () {
 /** Route Profile **/
 Route::resource('profil', ProfileController::class);
 });
+/** Route Barang **/
+Route::resource('barang', ItemController::class);
