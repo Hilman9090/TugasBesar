@@ -24,3 +24,7 @@ Route::resource('profil', ProfileController::class);
 Route::resource('barang', ItemController::class);
 Route::resource('kategori', CategoriesController::class);
 Route::resource('merek', MerkController::class);
+Route::get(
+    'laporan/barang',
+    [ItemController::class, 'report']
+)->name('laporan.barang');
